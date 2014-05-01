@@ -41,8 +41,10 @@ function readFile($file){
 }
 
 function proccessLinks($list){
+$client = new-object System.Net.WebClient
 
     foreach($item in $list){
         Write-Host("Processing $item")
+        $client.DownloadFile("$item,".\Data\Temp\##Regex to get file##file.txt")
     }
 }
